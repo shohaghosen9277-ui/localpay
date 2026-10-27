@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffffff"><title>LocalPay Secure Checkout</title>
+<link rel="stylesheet" href="/checkout.css">
+</head>
+<body>
+<main class="page">
+<header class="brand"><div class="logo">MS<small>AGENCY</small></div><div class="brandtext"><h1 id="merchantName">MS SERVICE AGENCY</h1><p>Secure Checkout</p><small id="referenceLine">নিরাপদ পেমেন্ট চেকআউট</small></div><strong class="amount"><span id="amount">510</span> BDT⌄</strong></header>
+<div class="tabs"><button class="tab active" data-filter="all">▦ সব পদ্ধতি</button><button class="tab" data-filter="mobile">▢ মোবাইল ব্যাংকিং</button></div>
+<section class="methods" id="methods">
+<button class="method" data-method="Bangla QR"><b class="qr">BANGLA<br>QR</b><span>Bangla QR</span></button>
+<button class="method" data-method="bKash"><b class="bkash">bKash</b><span>bKash Personal</span></button>
+<button class="method" data-method="Nagad"><b class="nagad">নগদ</b><span>Nagad Personal</span></button>
+<button class="method" data-method="Rocket"><b class="rocket">Rocket</b><span>Rocket Personal</span></button>
+<button class="method" data-method="Cellfin"><b class="cellfin">Cellfin</b><span>Cellfin Personal</span></button>
+<button class="method" data-method="mCash"><b class="mcash">mCash</b><span>mCash Personal</span></button>
+</section>
+<section class="formcard">
+<h2 id="formTitle">পেমেন্ট পদ্ধতি বেছে নিন</h2><p id="instructions">একটি পদ্ধতি নির্বাচন করলে পেমেন্ট নির্দেশনা দেখানো হবে।</p>
+<div id="merchantNumber" class="merchant-number hidden"></div>
+<form id="checkoutForm">
+<label>আপনার নাম<input name="customer_name" required maxlength="120" placeholder="পূর্ণ নাম"></label>
+<label>মোবাইল নম্বর<input name="customer_phone" required maxlength="40" inputmode="tel" placeholder="01XXXXXXXXX"></label>
+<label>Transaction ID / TrxID<input name="transaction_ref" required maxlength="120" placeholder="পেমেন্টের TrxID লিখুন"></label>
+<button class="pay" id="submitBtn" type="submit" disabled>510 BDT পেমেন্ট জমা দিন</button>
+</form><p class="notice" id="message" role="status">প্রথমে পেমেন্ট পদ্ধতি নির্বাচন করুন।</p>
+<div id="statusBox" class="statusbox hidden"><strong>পেমেন্ট যাচাই চলছে</strong><p>অ্যাডমিন আপনার Transaction ID যাচাই করবেন। অনুমোদন হলে এই পেজ থেকে স্বয়ংক্রিয়ভাবে গন্তব্য লিংকে যাবেন। এই পেজ বন্ধ করবেন না।</p></div>
+</section>
+<a class="cancel" href="/">বাতিল করে ফিরে যান</a><footer>♧ সাপোর্ট <span>文 বাংলা</span></footer>
+</main><script src="/checkout.js"></script>
+</body></html>
